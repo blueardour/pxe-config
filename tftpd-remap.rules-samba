@@ -1,0 +1,50 @@
+
+
+ri ^[a-z]:	 
+rg \\ / 	 # Convert backslashes to slashes
+rg \# @ 	 # Convert hash marks to @ signs
+rg /../ /..no../ # Convert /../ to /..no../
+rg A a
+rg B b
+rg C c
+rg D d
+rg E e
+rg F f
+rg G g
+rg H h
+rg I i
+rg J j
+rg K k
+rg L l
+rg M m
+rg N n
+rg O o
+rg P p
+rg Q q
+rg R r
+rg S s
+rg T t
+rg U u
+rg V v
+rg W w
+rg X x
+rg Y y
+rg Z z
+r  ^/(.*) \1
+
+
+
+re ^xp86c.0$      1.winxp-x86-ch/xp86c.0
+re ^xp86c$        1.winxp-x86-ch/xp86c
+re ^ntdxp86c.wxp$ 1.winxp-x86-ch/ntdxp86c.wxp
+re ^xp86c.sif$    1.winxp-x86-ch/xp86c.sif
+
+re ^xp64e.0$      10.winxp-x64-en/xp64e.0
+re ^xp64e$        10.winxp-x64-en/xp64e
+re ^ntdxp64e.wxp$ 10.winxp-x64-en/ntdxp64e.wxp
+re ^xp64e.sif$    10.winxp-x64-en/xp64e.sif
+
+re ^xp86e.0$      13.winxp-x86-en/xp86e.0
+re ^xp86e$        13.winxp-x86-en/xp86e
+re ^ntdxp86e.wxp$ 13.winxp-x86-en/ntdxp86e.wxp
+re ^xp86e.sif$    13.winxp-x86-en/xp86e.sif

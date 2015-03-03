@@ -1,0 +1,29 @@
+1.upper letter become little letter after mount ISO file
+
+From:http://reboot.pro/topic/17666-case-change-of-filesfolders-when-mounting-avira-iso
+
+If I mount the Avira Rescue ISO from here and mount it under Windows 7 64-bit as a drive volume, the files and folders in the mounted volume are all uppercase, so that when I copy the files to a bootable USB drive, I get an error when it boots due to the case of some files being wrong.
+If I use 7Zip then the files are correctly shown and extracted as lowercase. Presumably this is due to the way the ISO was originally prepared by Avira?
+
+==> Question is more what is correct and what is not correct. The iso image your link points to, contains a standard old ISO9660 image. Such images have an "undefined case" in filenames. The interpretation of characters in filenames as either all uppercase or all lowercase is implementation specific and can vary between operating systems. Now, for historical reasons, Windows cdfs.sys filesystem driver report all filenames on such volumes as all uppercase. Many Unix ISO9660 filesystem drivers report them as all lowercase. This of course introduce risks in applications where you transfer files between systems with different interpretation of filename case, or in general when using filename case-sensitive applications.
+
+Now, back in the days of developing Windows 95, Microsoft realised that this would be a problem if not solved as quick as possible. They introduced an extension to ISO9660 filename namespace, called "Joliet". It allows case-insensitive but case-preserving filenames on otherwise ISO9660 volumes. To comply with ISO standards, a Joliet image mastering also create parallel ISO9660 compatible filenames (see for example if you run mkisofs -J or similar). The "Unix world" introduced a similar ISO9660 extension called Rock Ridge. It solves pretty much the same thing, but it is both case-preserving and case-sensitive, as well as in other respects more or less fully Posix filesystem compatible.
+
+Now, almost 18 years later, almost all CD/DVD data images are mastered with at least three filename namespaces. Standard ISO9660, Joliet and Rock Ridge. But the Avira image in this case, has only the standard ISO9660 namespace and nothing else. This is still reasonably common for example for bootable operating system setup images or similar. This leaves cdfs.sys in Windows to using standard ISO9660 namespace for filenames, which it will present to the operating system as upper case.
+
+'steve6375', on 20 Oct 2012 - 03:49 AM, said:
+This does severely limit the usage of ImDisk for mounting ISO's and copying files from it though, as it seems I cannot trust ImDisk...
+
+Yes, unfortunately it does. The same applies to all solutions involving use of a virtual CD/DVD device to present the ISO image to the operating system as virtual CD/DVD media. You would also see the same results if you burn the image directly to physical CD/DVD media. In all these cases the filenames are read by cdfs.sys which will treat them the same. That is, in this case, uppercase filenames. The disk drivers are not involved in filename convention in any way. Therefore, there is nothing we could do in imdisk.sys to solve this, just like cdrom.sys in Windows cannot solve it for physical CD/DVD devices.
+
+On the other hand, with 7-zip and other archivers, there is no virtual CD/DVD device involved. ISO images are parsed directly within the application in the same way as for example a zip archive. It is therefore in that case up to the archiver application to decide what to do with the filenames. 7-zip developer has decided to go for lowercase. This is in my opinion a good choice. It keeps compatibility with most other usages for files in the ISO images. 
+
+
+2. get ip failed on virtualbox (bridge network) on dhcp-server when is ethernet wire is unplugged
+
+From:http://www.virtualbox.org/manual/ch06.html#network_hostonly
+
+With bridged networking, VirtualBox uses a device driver on your host system that filters data from your physical network adapter. This driver is therefore called a "net filter" driver. This allows VirtualBox to intercept data from the physical network and inject data into it, effectively creating a new network interface in software. When a guest is using such a new software interface, it looks to the host system as though the guest were physically connected to the interface using a network cable: the host can send data to the guest through that interface and receive data from it. This means that you can set up routing or bridging between the guest and the rest of your network.
+
+For this to work, VirtualBox needs a device driver on your host system. The way bridged networking works has been completely rewritten with VirtualBox 2.0 and 2.1, depending on the host operating system. From the user perspective, the main difference is that complex configuration is no longer necessary on any of the supported host operating systems.[30]
+

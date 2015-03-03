@@ -1,0 +1,43 @@
+
+timeout 20
+default 0
+
+title Load pxeLinux
+pxe keep
+chainloader --raw (pd)/pxelinux.0
+
+title Boot From the first partion of the first disk
+root (hd0,0)
+chainloader +1
+
+title Commandline
+commandline
+
+title Find and load BOOTMGR of Windows Vista, Win7, Server2008
+find --set-root /bootmgr
+chainloader /bootmgr
+
+title Find and load NTLDR of Windows NT/2K/XP
+find --set-root /ntldr
+chainloader /ntldr
+
+title Boot Ubuntu-10.10-i386 ISO File
+find --set-root /Ubuntu10.10/vmlinuz
+kernel 	/Ubuntu10.10/vmlinuz  boot=casper iso-scan/filename=/Ubuntu10.10/ubuntu-10.10-desktop-i386.iso ro
+initrd 	/Ubuntu10.10/initrd.lz
+
+title Boot Ubuntu-10.10-AMD64 ISO File
+find --set-root /Ubuntu10.10/vmlinuz
+kernel 	/Ubuntu10.10/vmlinuz  boot=casper iso-scan/filename=/Ubuntu10.10/ubuntu-10.10-desktop-amd64.iso ro
+initrd 	/Ubuntu10.10/initrd.lz
+
+title Diskless Ubuntu 10.10 
+kernel (pd)/14.diskless-linux/kernel root=/dev/nfs boot=nfs nfsroot=192.168.1.1:/nfs_root/ubuntu-10.10-i386 ip=dhcp panic=20
+initrd (pd)/14.diskless-linux/initrd
+
+title Reboot
+reboot
+
+title Halt
+halt
+

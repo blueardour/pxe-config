@@ -1,0 +1,159 @@
+
+
+ri ^[a-z]:	 
+rg \\ / 	 # Convert backslashes to slashes
+rg \# @ 	 # Convert hash marks to @ signs
+rg /../ /..no../ # Convert /../ to /..no../
+rg A a
+rg B b
+rg C c
+rg D d
+rg E e
+rg F f
+rg G g
+rg H h
+rg I i
+rg J j
+rg K k
+rg L l
+rg M m
+rg N n
+rg O o
+rg P p
+rg Q q
+rg R r
+rg S s
+rg T t
+rg U u
+rg V v
+rg W w
+rg X x
+rg Y y
+rg Z z
+r  ^/(.*) \1
+
+
+re ^xp64e$        10.winxp-x64-en/xp64e
+re ^ntdxp64e.wxp$ 10.winxp-x64-en/ntdxp64e.wxp
+re ^xp64e.sif$    10.winxp-x64-en/xp64e.sif
+re ^os-cd/winxp-en-x64/i686/txtsetup.sif$ 10.winxp-x64-en/i686/txtsetup.sif
+re ^os-cd/winxp-en-x64/i686 os-cd/winxp-en-x64/amd64
+
+re ^xp86e$        13.winxp-x86-en/xp86e
+re ^ntdxp86e.wxp$ 13.winxp-x86-en/ntdxp86e.wxp
+re ^xp86e.sif$    13.winxp-x86-en/xp86e.sif
+re ^os-cd/winxp-en-x86/i386/txtsetup.sif$ 13.winxp-x86-en/i386/txtsetup.sif
+
+re ^xp86c$        1.winxp-x86-ch/xp86c
+re ^ntdxp86c.wxp$ 1.winxp-x86-ch/ntdxp86c.wxp
+re ^xp86c.sif$    1.winxp-x86-ch/xp86c.sif
+
+# extra driver
+re (.*)/i386/iastor.sys$   0.winxp-drivers-via-binlsrv/drivers/iastor.sys
+re (.*)/i386/w940nd.sys$  0.winxp-drivers-via-binlsrv/drivers/w940nd.sys
+re (.*)/i386/irda.sys$  0.winxp-drivers-via-binlsrv/drivers/irda.sys
+re (.*)/i386/k57xp32.sys$  0.winxp-drivers-via-binlsrv/drivers/k57xp32.sys
+re (.*)/i386/e100b325.sys$  0.winxp-drivers-via-binlsrv/drivers/e100b325.sys
+re (.*)/i386/smc8000n.sys$  0.winxp-drivers-via-binlsrv/drivers/smc8000n.sys
+re (.*)/i386/usb101et.sys$  0.winxp-drivers-via-binlsrv/drivers/usb101et.sys
+re (.*)/i386/n1000nt5.sys$  0.winxp-drivers-via-binlsrv/drivers/n1000nt5.sys
+re (.*)/i386/fpnpbase.sys$  0.winxp-drivers-via-binlsrv/drivers/fpnpbase.sys
+re (.*)/i386/epro4.sys$  0.winxp-drivers-via-binlsrv/drivers/epro4.sys
+re (.*)/i386/elnk3.sys$  0.winxp-drivers-via-binlsrv/drivers/elnk3.sys
+re (.*)/i386/b57w2k.sys$  0.winxp-drivers-via-binlsrv/drivers/b57w2k.sys
+re (.*)/i386/cem33n5.sys$  0.winxp-drivers-via-binlsrv/drivers/cem33n5.sys
+re (.*)/i386/fus2base.sys$  0.winxp-drivers-via-binlsrv/drivers/fus2base.sys
+re (.*)/i386/xem336n5.sys$  0.winxp-drivers-via-binlsrv/drivers/xem336n5.sys
+re (.*)/i386/atl02_xp.sys$  0.winxp-drivers-via-binlsrv/drivers/atl02_xp.sys
+re (.*)/i386/rasirda.sys$  0.winxp-drivers-via-binlsrv/drivers/rasirda.sys
+re (.*)/i386/e1c5132.sys$  0.winxp-drivers-via-binlsrv/drivers/e1c5132.sys
+re (.*)/i386/w926nd.sys$  0.winxp-drivers-via-binlsrv/drivers/w926nd.sys
+re (.*)/i386/dfe650.sys$  0.winxp-drivers-via-binlsrv/drivers/dfe650.sys
+re (.*)/i386/fa410nd5.sys$  0.winxp-drivers-via-binlsrv/drivers/fa410nd5.sys
+re (.*)/i386/lne100tx.sys$  0.winxp-drivers-via-binlsrv/drivers/lne100tx.sys
+re (.*)/i386/el574nd4.sys$  0.winxp-drivers-via-binlsrv/drivers/el574nd4.sys
+re (.*)/i386/dfe650d.sys$  0.winxp-drivers-via-binlsrv/drivers/dfe650d.sys
+re (.*)/i386/ce3n5.sys$  0.winxp-drivers-via-binlsrv/drivers/ce3n5.sys
+re (.*)/i386/ce2n5.sys$  0.winxp-drivers-via-binlsrv/drivers/ce2n5.sys
+re (.*)/i386/b1cbase.sys$  0.winxp-drivers-via-binlsrv/drivers/b1cbase.sys
+re (.*)/i386/fei5132.sys$  0.winxp-drivers-via-binlsrv/drivers/fei5132.sys
+re (.*)/i386/el90xbc5.sys$  0.winxp-drivers-via-binlsrv/drivers/el90xbc5.sys
+re (.*)/i386/wlluc48.sys$  0.winxp-drivers-via-binlsrv/drivers/wlluc48.sys
+re (.*)/i386/otc06x5.sys$  0.winxp-drivers-via-binlsrv/drivers/otc06x5.sys
+re (.*)/i386/cem28n5.sys$  0.winxp-drivers-via-binlsrv/drivers/cem28n5.sys
+re (.*)/i386/diwan.sys$  0.winxp-drivers-via-binlsrv/drivers/diwan.sys
+re (.*)/i386/netflx3.sys$  0.winxp-drivers-via-binlsrv/drivers/netflx3.sys
+re (.*)/i386/bcm42xx5.sys$  0.winxp-drivers-via-binlsrv/drivers/bcm42xx5.sys
+re (.*)/i386/avmwan.sys$  0.winxp-drivers-via-binlsrv/drivers/avmwan.sys
+re (.*)/i386/cb102.sys$  0.winxp-drivers-via-binlsrv/drivers/cb102.sys
+re (.*)/i386/ex10.sys$  0.winxp-drivers-via-binlsrv/drivers/ex10.sys
+re (.*)/i386/e1e5032.sys$  0.winxp-drivers-via-binlsrv/drivers/e1e5032.sys
+re (.*)/i386/e1000325.sys$  0.winxp-drivers-via-binlsrv/drivers/e1000325.sys
+re (.*)/i386/tjisdn.sys$  0.winxp-drivers-via-binlsrv/drivers/tjisdn.sys
+re (.*)/i386/el656cd5.sys$  0.winxp-drivers-via-binlsrv/drivers/el656cd5.sys
+re (.*)/i386/vinwm.sys$  0.winxp-drivers-via-binlsrv/drivers/vinwm.sys
+re (.*)/i386/e100isa4.sys$  0.winxp-drivers-via-binlsrv/drivers/e100isa4.sys
+re (.*)/i386/bthpan.sys$  0.winxp-drivers-via-binlsrv/drivers/bthpan.sys
+re (.*)/i386/el656nd5.sys$  0.winxp-drivers-via-binlsrv/drivers/el656nd5.sys
+re (.*)/i386/el985n51.sys$  0.winxp-drivers-via-binlsrv/drivers/el985n51.sys
+re (.*)/i386/aspndis3.sys$  0.winxp-drivers-via-binlsrv/drivers/aspndis3.sys
+re (.*)/i386/fpcibase.sys$  0.winxp-drivers-via-binlsrv/drivers/fpcibase.sys
+re (.*)/i386/pcntn5hl.sys$  0.winxp-drivers-via-binlsrv/drivers/pcntn5hl.sys
+re (.*)/i386/dp83820.sys$  0.winxp-drivers-via-binlsrv/drivers/dp83820.sys
+re (.*)/i386/dc21x4.sys$  0.winxp-drivers-via-binlsrv/drivers/dc21x4.sys
+re (.*)/i386/rfcomm.sys$  0.winxp-drivers-via-binlsrv/drivers/rfcomm.sys
+re (.*)/i386/pcntpci5.sys$  0.winxp-drivers-via-binlsrv/drivers/pcntpci5.sys
+re (.*)/i386/b57xp32.sys$  0.winxp-drivers-via-binlsrv/drivers/b57xp32.sys
+re (.*)/i386/pcx500.sys$  0.winxp-drivers-via-binlsrv/drivers/pcx500.sys
+re (.*)/i386/wlandrv2.sys$  0.winxp-drivers-via-binlsrv/drivers/wlandrv2.sys
+re (.*)/i386/el98xn5.sys$  0.winxp-drivers-via-binlsrv/drivers/el98xn5.sys
+re (.*)/i386/cpqndis5.sys$  0.winxp-drivers-via-binlsrv/drivers/cpqndis5.sys
+re (.*)/i386/cnxt1803.sys$  0.winxp-drivers-via-binlsrv/drivers/cnxt1803.sys
+re (.*)/i386/f3ab18xj.sys$  0.winxp-drivers-via-binlsrv/drivers/f3ab18xj.sys
+re (.*)/i386/pci.sys$  0.winxp-drivers-via-binlsrv/drivers/pci.sys
+re (.*)/i386/fpcmbase.sys$  0.winxp-drivers-via-binlsrv/drivers/fpcmbase.sys
+re (.*)/i386/el589nd5.sys$  0.winxp-drivers-via-binlsrv/drivers/el589nd5.sys
+re (.*)/i386/e1y5132.sys$  0.winxp-drivers-via-binlsrv/drivers/e1y5132.sys
+re (.*)/i386/dlh5xnd5.sys$  0.winxp-drivers-via-binlsrv/drivers/dlh5xnd5.sys
+re (.*)/i386/ne2000.sys$  0.winxp-drivers-via-binlsrv/drivers/ne2000.sys
+re (.*)/i386/ip5515.sys$  0.winxp-drivers-via-binlsrv/drivers/ip5515.sys
+re (.*)/i386/e100bnt5.sys$  0.winxp-drivers-via-binlsrv/drivers/e100bnt5.sys
+re (.*)/i386/tdk100b.sys$  0.winxp-drivers-via-binlsrv/drivers/tdk100b.sys
+re (.*)/i386/fetnd5.sys$  0.winxp-drivers-via-binlsrv/drivers/fetnd5.sys
+re (.*)/i386/an983.sys$  0.winxp-drivers-via-binlsrv/drivers/an983.sys
+re (.*)/i386/f3ab18xi.sys$  0.winxp-drivers-via-binlsrv/drivers/f3ab18xi.sys
+re (.*)/i386/nic1394.sys$  0.winxp-drivers-via-binlsrv/drivers/nic1394.sys
+re (.*)/i386/tbatm155.sys$  0.winxp-drivers-via-binlsrv/drivers/tbatm155.sys
+re (.*)/i386/cben5.sys$  0.winxp-drivers-via-binlsrv/drivers/cben5.sys
+re (.*)/i386/mxnic.sys$  0.winxp-drivers-via-binlsrv/drivers/mxnic.sys
+re (.*)/i386/fusbbase.sys$  0.winxp-drivers-via-binlsrv/drivers/fusbbase.sys
+re (.*)/i386/rlnet5.sys$  0.winxp-drivers-via-binlsrv/drivers/rlnet5.sys
+re (.*)/i386/el575nd5.sys$  0.winxp-drivers-via-binlsrv/drivers/el575nd5.sys
+re (.*)/i386/cpqtrnd5.sys$  0.winxp-drivers-via-binlsrv/drivers/cpqtrnd5.sys
+re (.*)/i386/sgsmusb.sys$  0.winxp-drivers-via-binlsrv/drivers/sgsmusb.sys
+re (.*)/i386/ngrpci.sys$  0.winxp-drivers-via-binlsrv/drivers/ngrpci.sys
+re (.*)/i386/fxusbase.sys$  0.winxp-drivers-via-binlsrv/drivers/fxusbase.sys
+re (.*)/i386/pc100nds.sys$  0.winxp-drivers-via-binlsrv/drivers/pc100nds.sys
+re (.*)/i386/srwlnd5.sys$  0.winxp-drivers-via-binlsrv/drivers/srwlnd5.sys
+re (.*)/i386/adptsf50.sys$  0.winxp-drivers-via-binlsrv/drivers/adptsf50.sys
+re (.*)/i386/smcpwr2n.sys$  0.winxp-drivers-via-binlsrv/drivers/smcpwr2n.sys
+re (.*)/i386/lanepic5.sys$  0.winxp-drivers-via-binlsrv/drivers/lanepic5.sys
+re (.*)/i386/mdgndis5.sys$  0.winxp-drivers-via-binlsrv/drivers/mdgndis5.sys
+re (.*)/i386/tunmp.sys$  0.winxp-drivers-via-binlsrv/drivers/tunmp.sys
+re (.*)/i386/tpro4.sys$  0.winxp-drivers-via-binlsrv/drivers/tpro4.sys
+re (.*)/i386/loop.sys$  0.winxp-drivers-via-binlsrv/drivers/loop.sys
+re (.*)/i386/e1000nt5.sys$  0.winxp-drivers-via-binlsrv/drivers/e1000nt5.sys
+re (.*)/i386/cicap.sys$  0.winxp-drivers-via-binlsrv/drivers/cicap.sys
+re (.*)/i386/e1e5132.sys$  0.winxp-drivers-via-binlsrv/drivers/e1e5132.sys
+
+
+
+re (.*)/i686/e1q51x64.sys$  0.winxp-drivers-via-binlsrv/drivers64/e1q51x64.sys
+re (.*)/i686/e1c51x64.sys$  0.winxp-drivers-via-binlsrv/drivers64/e1c51x64.sys
+re (.*)/i686/e1e5132e.sys$  0.winxp-drivers-via-binlsrv/drivers64/e1e5132e.sys
+re (.*)/i686/e1r51x64.sys$  0.winxp-drivers-via-binlsrv/drivers64/e1r51x64.sys
+re (.*)/i686/e1g5132e.sys$  0.winxp-drivers-via-binlsrv/drivers64/e1g5132e.sys
+re (.*)/i686/iastor.sys$  0.winxp-drivers-via-binlsrv/drivers64/iastor.sys
+re (.*)/i686/e1k51x64.sys$  0.winxp-drivers-via-binlsrv/drivers64/e1k51x64.sys
+re (.*)/i686/e1y51x64.sys$  0.winxp-drivers-via-binlsrv/drivers64/e1y51x64.sys
+

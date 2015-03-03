@@ -1,0 +1,101 @@
+
+# os-cd
+/os-cd/winxp-en-x64
+/os-cd/winxp-en-x86
+/os-cd/winxp-zh-x86
+
+# syslinux
+/utils/binl-server/ris-linux-0.4
+/utils/grub4dos/grub4dos-0.4.4
+/utils/syslinux
+/utils/test
+
+# pxe config
+/pxelinux.cfg/default
+/menu.lst/default
+
+# only add the *.inf file
+/0.winxp-drivers-via-binlsrv/inf/*
+!/0.winxp-drivers-via-binlsrv/inf/*.inf
+
+/0.winxp-drivers-via-binlsrv/cab-bak
+/0.winxp-drivers-via-binlsrv/*.rar
+
+# only add the *.sys file
+/0.winxp-drivers-via-binlsrv/drivers/*
+!/0.winxp-drivers-via-binlsrv/drivers/*.sys
+/0.winxp-drivers-via-binlsrv/drivers64/*
+!/0.winxp-drivers-via-binlsrv/drivers64/*.sys
+
+# 1.winxp-x86-ch
+/1.winxp-x86-ch/i386/*
+!/1.winxp-x86-ch/i386/txtsetup.sif
+/1.winxp-x86-ch/*.py
+/1.winxp-x86-ch/*.inf
+/1.winxp-x86-ch/tmp
+/1.winxp-x86-ch/*.txt
+/1.winxp-x86-ch/*.cache
+/1.winxp-x86-ch/xp86c.sif
+ 
+# 2.win7-x86-en/
+/2.winxp-x86-ch/*
+
+# 2.win7-x86-en/
+/2.win7-x86-en/*
+
+# 3.win7-x64-en/
+/3.win7-x64-en/*
+
+# 4.win7-x86-ch/*
+/4.win7-x86-ch/*
+ 
+# 5.win7-x64-ch/*
+/5.win7-x64-ch/*
+ 
+/6.ubuntu-10.10-desktop-i386/*
+ 
+/7.ubuntu-12.04-desktop-i386/*
+ 
+/8.ubuntu-10.10-desktop-amd64/*
+ 
+/9.ubuntu-12.04-desktop-amd64/*
+ 
+# 10.winxp-x64-en/
+/10.winxp-x64-en/tmp
+/10.winxp-x64-en/*bak
+/10.winxp-x64-en/*.tar
+/10.winxp-x64-en/amd64/*
+!/10.winxp-x64-en/amd64/txtsetup.sif
+/10.winxp-x64-en/i386/*
+/10.winxp-x64-en/xp64e.sif
+ 
+# 11.win-pe/
+# file size should not exceed 100M for GitHub
+/11.win-pe/winpe_maotao_final-20070911.iso
+ 
+/12.winxp-x64-ch/*
+ 
+# 13.winxp-x86-en/
+/13.winxp-x86-en/i386/*
+!/13.winxp-x86-en/i386/txtsetup.sif
+/13.winxp-x86-en/xp86e.sif
+ 
+/14.diskless-linux/*
+/14.diskless-linux/boot/Bak*
+/14.diskless-linux/boot/linux-source-2.6.32.60+drm33.26-lite
+/14.diskless-linux/boot/linux-source-2.6.32.60+drm33.26-nfs
+
+/15-lucid-i386/
+/16-lucid-amd64/
+/17-oneiric-i386/
+/18-oneiric-amd64/
+/19-precise-i386/
+/20-precise-amd64/
+/21-quantal-i386/
+/22-quantal-amd64/
+/23-raring-i386/
+/24-raring-amd64/
+/25-saucy-i386/
+/26-saucy-amd64/
+
+/debian-amd64/

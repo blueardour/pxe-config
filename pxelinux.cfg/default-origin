@@ -1,0 +1,43 @@
+
+default	pxelinux.cfg/vesamenu.c32
+timeout 200
+
+menu	title PXE Server
+menu	backgroud PXE.png
+
+label	local
+menu	label ^1---Boot From Local disk(hd0,1)
+kernel	pxelinux.cfg/chain.c32
+append	hd0 1
+
+label   grub4dos
+menu    label ^2---Boot Grub4dos
+kernel  grldr.0
+
+label	winpe3
+menu	label ^3---Boot Windows PE LaoMaoTao-FullEdition
+kernel	11.win-pe/memdisk raw iso initrd=11.win-pe/WinPE-MaoTao-Final-20070911.iso
+
+label	winpe2
+menu	label ^4---Boot Windows PE LaoMaoTao-LiteEdition
+kernel	11.win-pe/memdisk
+append  iso initrd=11.win-pe/WinPE-MaoTao-Single-1111.iso
+
+label	winxp-x86-en(unavailable)
+menu	label ^5---Install WinXP-X86-EN
+kernel	13.winxp-x86-en/xp86e.0
+
+label	winxp-x64-en(unavailable)
+menu	label ^6---Install WinXP-X64-EN
+kernel	10.winxp-x64-en/xp64e.0
+
+#label	winxp-x86-ch(unavailable)
+#menu	label ^7---Install WinXP-X86-CH
+#kernel	1.winxp-x86-ch/xp86c.0
+
+label	diskless-linux
+menu	label ^a---DiskLess Ubuntu10.10(unavailable)
+kernel	14.diskless-linux/kernel
+append  initrd=14.diskless-linux/initrd root=/dev/nfs boot=nfs nfsroot=192.168.1.1:/nfs_root/ubuntu-10.10-i386 ip=dhcp panic=20
+
+
